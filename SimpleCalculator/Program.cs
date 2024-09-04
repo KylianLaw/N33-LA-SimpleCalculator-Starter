@@ -1,4 +1,5 @@
 ﻿using System;
+using CalculatorEngine;
 
 namespace SimpleCalculator
 {
@@ -8,16 +9,15 @@ namespace SimpleCalculator
         {
             try
             {
-              //allooooooooooooooooooooo
-              //lol
+              
                 // Class to perform actual calculations
-                CalculatorEngine calculatorEngine = new CalculatorEngine();
+                
 
                 double firstNumber = InputConverter.ConvertInputToNumeric(Console.ReadLine());
                 double secondNumber = InputConverter.ConvertInputToNumeric(Console.ReadLine());
                 string operation = Console.ReadLine();
 
-                double result = calculatorEngine.Calculate(operation, firstNumber, secondNumber);
+                double result = CalEng.Calculate(operation, firstNumber, secondNumber);
 
                 Console.WriteLine(result);
 
