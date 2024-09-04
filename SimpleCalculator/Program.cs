@@ -48,7 +48,7 @@ namespace SimpleCalculator
 
                 string operation = Console.ReadLine();
 
-                double result = CalEng.Calculate(operation, firstNumber, secondNumber);
+                //double result =CalcEngine.Calculate(operation, firstNumber, secondNumber);
 
                 
                 Console.WriteLine("The value {0} {1} the value {2} equals to " + String.Format("{3:.##}", firstNumber, operation, secondNumber, result));
