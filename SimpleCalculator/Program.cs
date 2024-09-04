@@ -5,6 +5,26 @@ namespace SimpleCalculator
 {
     class Program
     {
+
+        static bool ValidOperation(string operation)
+        {
+            switch (operation)
+            {
+                case "+":
+                case "-":
+                case "*":
+                case "/":
+                case "add":
+                case "subtract":
+                case "multiply":
+                case "divide":
+                    return true;
+
+                default:
+                    Console.WriteLine("Wrong symbol");
+                    return false;
+            }
+        }
         static void Main(string[] args)
         {
             try
@@ -48,7 +68,7 @@ namespace SimpleCalculator
 
                 string operation = Console.ReadLine();
 
-                //double result =CalcEngine.Calculate(operation, firstNumber, secondNumber);
+                double result =CalcEngine.Calculate(operation, firstNumber, secondNumber);
 
                 
                 Console.WriteLine("The value {0} {1} the value {2} equals to " + String.Format("{3:.##}", firstNumber, operation, secondNumber, result));
