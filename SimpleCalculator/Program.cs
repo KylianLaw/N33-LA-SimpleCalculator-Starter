@@ -11,7 +11,8 @@ namespace SimpleCalculator
             {
 
                 // Class to perform actual calculations
-                CalculatorEngine calculatorEngine = new CalculatorEngine();
+               
+                //CalculatorEngine calculatorEngine = new CalculatorEngine();
                 Boolean work = false;
                 double firstNumber= 0;
                 double secondNumber = 0;
