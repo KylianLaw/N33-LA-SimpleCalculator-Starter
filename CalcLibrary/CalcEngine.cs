@@ -18,12 +18,14 @@ namespace CalcLibrary
             {
                 case "+":
                 case "add":
+                case "plus":
                     result = argFirstNumber + argSecondNumber;
                     break;
 
 
                 case "-":
                 case "substract":
+                case "moins":
                     result = argFirstNumber - argSecondNumber;
                     break;
 

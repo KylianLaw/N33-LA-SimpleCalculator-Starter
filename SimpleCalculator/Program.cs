@@ -36,6 +36,7 @@ namespace SimpleCalculator
                 Boolean work = false;
                 double firstNumber= 0;
                 double secondNumber = 0;
+                string operation = "";
                 while (work == false)
                 {
                     Console.WriteLine("Enter a first value");
@@ -65,14 +66,30 @@ namespace SimpleCalculator
                             break;
                     }
                 }
+                work = false;
+               while (work == false) {
+                    Console.WriteLine("Enter a operation symbol");
+                    operation = Console.ReadLine();
+                    work = ValidOperation(operation);
+                    switch (work)
+                    {
+                        case true:
+                            break;
+                        case false:
+                            Console.WriteLine("the conversion as failed, enter a valid operation");
+                            break;
+                    }
+                    
+                }
 
-                string operation = Console.ReadLine();
+               
+
 
                 double result =CalcEngine.Calculate(operation, firstNumber, secondNumber);
 
                 
-                Console.WriteLine("The value {0} {1} the value {2} equals to " + String.Format("{3:.##}", firstNumber, operation, secondNumber, result));
-               
+                Console.WriteLine("The value {0} {1} the value {2} equals to {3:.##}", firstNumber, operation, secondNumber, result);
+               Console.ReadKey();
             } catch (Exception ex)
             {
                 // Normally, we'd log this error to a file.
