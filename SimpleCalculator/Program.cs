@@ -106,11 +106,18 @@ namespace SimpleCalculator
                     }
 
                 }
+                catch (DivideByZeroException es)
+                {
+                    Console.WriteLine(es.Message);
+                    Console.ReadKey();
+
+                }
                 catch (Exception ex)
                 {
                     // Normally, we'd log this error to a file.
                     Console.WriteLine(ex.Message);
                 }
+                
             }
         }
     }
